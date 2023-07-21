@@ -12,11 +12,10 @@ public class TeacherController implements iPersonController<Teacher> {
 
     @Override
     public void create(String firstName, int age) {
-        teacherService.create(firstName,age);
+        teacherService.create(firstName, age);
     }
 
-    public static <T extends Emploee> void paySalary(Teacher t1)
-    {
-        System.out.println(t1.getName()+" выплачена премия 30000р. ");
+    public static <T extends Emploee> void paySalary(Teacher t1) {
+        System.out.println(t1.getName() + " выплачена премия 30000р. ");
     }
 }

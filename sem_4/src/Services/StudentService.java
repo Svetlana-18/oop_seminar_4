@@ -21,17 +21,15 @@ public class StudentService implements iPersonService<Student> {
 
     @Override
     public void create(String firstName, int age) {
-        Student per = new Student(firstName,age,count);
+        Student per = new Student(firstName, age, count);
         count++;
         students.add(per);
-    }    
-
-    public void sortByFIOStdLst()
-    {
-       // List<Student> newStudentList = new ArrayList<Student>(students);
-        students.sort( new PersonComparator<Student>());
-        //return newStudentList;
     }
 
+    public void sortByFIOStdLst() {
+        // List<Student> newStudentList = new ArrayList<Student>(students);
+        students.sort(new PersonComparator<Student>());
+        // return newStudentList;
+    }
 
 }
