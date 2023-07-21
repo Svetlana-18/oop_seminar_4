@@ -3,8 +3,6 @@ package Services;
 import java.util.ArrayList;
 import java.util.List;
 
-import Domen.Emploee;
-import Domen.Student;
 import Domen.Teacher;
 
 public class TeacherService implements iPersonService<Teacher> {

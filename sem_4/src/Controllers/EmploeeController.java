@@ -1,9 +1,8 @@
 package Controllers;
 
 import Domen.Emploee;
-import Domen.Person;
+
 import Services.EmploeeService;
-//import Services.StudentService;
 
 public class EmploeeController implements iPersonController<Emploee> {
     private final EmploeeService empService = new EmploeeService();

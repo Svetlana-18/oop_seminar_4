@@ -1,8 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-
 import Controllers.EmploeeController;
 import Controllers.TeacherController;
 import Domen.AverageAge;
@@ -10,7 +7,6 @@ import Domen.Emploee;
 import Domen.Person;
 import Domen.PersonComparator;
 import Domen.Student;
-import Domen.StudentGroup;
 import Domen.Teacher;
 
 public class App {
@@ -33,16 +29,14 @@ public class App {
         listStud.add(s5);
         listStud.add(s6);
 
-
         PersonComparator<Student> comS = new PersonComparator<Student>();
         comS.compare(s1, s2);
 
-         // Делаю подсчет среднего возраста студентов и вывод результата на консоль
+        // Делаю подсчет среднего возраста студентов и вывод результата на консоль
 
         AverageAge<Student> studentsAverageAge = new AverageAge<>();
         double studentsAge = studentsAverageAge.calculator(listStud);
         System.out.println("Средний возраст студентов: " + studentsAge);
-
 
         // Создаю список учителей
 
@@ -67,7 +61,6 @@ public class App {
         // double teacherAge = teachAverageAge.calculator(listTeachers);
         // System.out.println("Средний возраст учителей: " + teacherAge);
 
-
         TeacherController.paySalary(t1);
 
         PersonComparator<Teacher> comT = new PersonComparator<Teacher>();
@@ -76,8 +69,7 @@ public class App {
         PersonComparator<Person> comP = new PersonComparator<Person>();
         comP.compare(s1, t2);
 
-
-// Создаю список работников
+        // Создаю список работников
 
         Emploee e1 = new Emploee("Иван", 25, "worker");
         Emploee e2 = new Emploee("Игорь", 54, "worker");
