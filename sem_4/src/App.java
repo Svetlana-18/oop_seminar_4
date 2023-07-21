@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import Controllers.EmploeeController;
 import Controllers.TeacherController;
@@ -7,9 +8,12 @@ import Domen.Emploee;
 import Domen.Person;
 import Domen.PersonComparator;
 import Domen.Student;
+import Domen.StudentGroup;
 import Domen.Teacher;
 
 public class App {
+    private static Student[] group;
+
     public static void main(String[] args) throws Exception {
 
         // Создаю список студентов
@@ -34,18 +38,23 @@ public class App {
 
         // Делаю подсчет среднего возраста студентов и вывод результата на консоль
 
-        AverageAge<Student> studentsAverageAge = new AverageAge<>();
-        double studentsAge = studentsAverageAge.calculator(listStud);
-        System.out.println("Средний возраст студентов: " + studentsAge);
+        // AverageAge<Student> studentsAverageAge = new AverageAge<>();
+        // double studentsAge = studentsAverageAge.calculator(listStud);
+        // System.out.println("Средний возраст студентов: " + studentsAge);
+
+        // Вывод списка студентов:
+        for (Student stud : listStud) {
+            System.out.println(stud);
+        }
 
         // Создаю список учителей
 
-        Teacher t1 = new Teacher("Иван", 25, "Docent");
-        Teacher t2 = new Teacher("Игорь", 23, "Professor");
-        Teacher t3 = new Teacher("Игорь", 23, "Professor");
-        Teacher t4 = new Teacher("Игорь", 23, "Professor");
-        Teacher t5 = new Teacher("Игорь", 23, "Professor");
-        Teacher t6 = new Teacher("Игорь", 23, "Professor");
+        Teacher t1 = new Teacher("Иван", 62, "Docent");
+        Teacher t2 = new Teacher("Роман", 55, "Professor");
+        Teacher t3 = new Teacher("Степан", 42, "Docent");
+        Teacher t4 = new Teacher("Виктор", 76, "Docent");
+        Teacher t5 = new Teacher("Станислав", 65, "Professor");
+        Teacher t6 = new Teacher("Алексей", 45, "Docent");
 
         List<Teacher> listTeachers = new ArrayList<Teacher>();
         listTeachers.add(t1);
@@ -60,6 +69,11 @@ public class App {
         // AverageAge<Teacher> teachAverageAge = new AverageAge<>();
         // double teacherAge = teachAverageAge.calculator(listTeachers);
         // System.out.println("Средний возраст учителей: " + teacherAge);
+
+        // Вывод списка студентов:
+        for (Teacher teacher : listTeachers) {
+            System.out.println(teacher);
+        }
 
         TeacherController.paySalary(t1);
 
